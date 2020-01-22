@@ -34,8 +34,6 @@ class UploadUtilsTest extends TestCase {
 
 
     /**
-     * A basic test example.
-     *
      * @return void
      */
     public function testGroupingTest() {
@@ -60,8 +58,7 @@ class UploadUtilsTest extends TestCase {
     }
 
     /**
-     * A basic test example.
-     *
+     * This test should fail as it is described in the test task
      * @return void
      */
     public function testGroupingTestWhichFails() {
