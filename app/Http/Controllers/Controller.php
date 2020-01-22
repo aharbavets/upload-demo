@@ -15,31 +15,13 @@ class Controller extends BaseController {
 
 
     function index() {
+        $uploads = Upload::all()
+        ;
+
         $fileTypes = [
             [
-                'title' => 'JPG',
-                'files' => [
-                    [
-                        'name' => 'File1.jpg',
-                        'size' => '5MB',
-                        'upload_date' => '2020-01-20',
-                        'user_name' => 'Alexander',
-                    ],
-                    ['name' => 'File2.jpeg'],
-                    ['name' => 'File3.jpg'],
-                    ['name' => 'File4.jpg'],
-                    ['name' => 'File5.jpg'],
-                ]
-            ],
-            [
-                'title' => 'PNG',
-                'files' => [
-                    ['name' => 'File1.png'],
-                    ['name' => 'File2.png'],
-                    ['name' => 'File3.png'],
-                    ['name' => 'File4.png'],
-                    ['name' => 'File5.png'],
-                ]
+                'title' => 'All File Types',
+                'files' => $uploads->map(function (Upload $upload) { return $upload->toArray(); })
             ],
         ];
         return view('index', compact('fileTypes'));
