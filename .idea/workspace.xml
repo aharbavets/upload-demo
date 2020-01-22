@@ -8309,6 +8309,22 @@
       </set>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="4" end1="8275" start2="4" end2="17" changelist="d098637d-1e11-4d78-a069-e40e4701fc14" />
+        <range start1="8302" end1="8302" start2="44" end2="45" changelist="d098637d-1e11-4d78-a069-e40e4701fc14" />
+        <range start1="8311" end1="8311" start2="54" end2="70" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8421" end1="8422" start2="180" end2="181" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8504" end1="8504" start2="263" end2="264" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8508" end1="8509" start2="268" end2="283" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8510" end1="8510" start2="284" end2="285" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8519" end1="8520" start2="294" end2="296" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8522" end1="8523" start2="298" end2="311" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+        <range start1="8525" end1="8526" start2="313" end2="314" changelist="e971ffb0-ffe8-4142-9a54-8fae46f625ac" />
+      </ranges>
+    </file>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
@@ -8419,7 +8435,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -8502,12 +8518,28 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e971ffb0-ffe8-4142-9a54-8fae46f625ac" name="Default Changelist" comment="" />
+      <changelist id="d098637d-1e11-4d78-a069-e40e4701fc14" name="Ignore" comment="" />
       <created>1579695091102</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579695091102</updated>
-      <workItem from="1579695099163" duration="1164000" />
+      <workItem from="1579695099163" duration="7367000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1579696269596</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579696269596</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added storage/.gitkeep">
+      <created>1579697578620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579697578620</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -8517,12 +8549,25 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Added storage/.gitkeep" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added storage/.gitkeep" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2" timestamp="1579696265207">
+    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2" timestamp="1579697578308">
       <screen x="0" y="0" width="1918" height="1028" />
     </state>
-    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2/0.0.1918.1028@0.0.1918.1028" timestamp="1579696265207" />
+    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2/0.0.1918.1028@0.0.1918.1028" timestamp="1579697578308" />
+    <state x="448" y="148" key="SettingsEditor" timestamp="1579700133828">
+      <screen x="0" y="0" width="1918" height="1028" />
+    </state>
+    <state x="448" y="148" key="SettingsEditor/0.0.1918.1028@0.0.1918.1028" timestamp="1579700133828" />
+    <state x="798" y="429" width="301" height="164" key="VCS.ChangelistChooser" timestamp="1579697556820">
+      <screen x="0" y="0" width="1918" height="1028" />
+    </state>
+    <state x="798" y="429" width="301" height="164" key="VCS.ChangelistChooser/0.0.1918.1028@0.0.1918.1028" timestamp="1579697556820" />
+    <state x="617" y="230" width="684" height="566" key="find.popup" timestamp="1579697671131">
+      <screen x="0" y="0" width="1918" height="1028" />
+    </state>
+    <state x="617" y="230" width="684" height="566" key="find.popup/0.0.1918.1028@0.0.1918.1028" timestamp="1579697671131" />
   </component>
 </project>
