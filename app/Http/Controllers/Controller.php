@@ -49,7 +49,7 @@ class Controller extends BaseController {
         $upload->username = $request->input('user_name');
         $upload->save();
 
-        return redirect('/')->with('success', 'File uploaded successfully! MIME type: ' . $mimeType);
+        return redirect('/')->with('success', 'File uploaded successfully!');
     }
 
 
