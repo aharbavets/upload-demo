@@ -15,8 +15,7 @@ class Controller extends BaseController {
 
 
     function index() {
-        $uploads = Upload::all()
-        ;
+        $uploads = Upload::all();
 
         $fileTypes = [
             [
