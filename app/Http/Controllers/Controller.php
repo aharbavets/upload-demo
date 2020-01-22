@@ -29,6 +29,17 @@ class Controller extends BaseController {
     function upload(Request $request) {
         $uploadedFile = $request->file('fileUpload');
 
+        $mimeType = $uploadedFile->getClientMimeType();
+
+        $allowedMimeTypesString = env('ALLOWED_MIME_TYPES');
+        $allowedMimeTypes = collect(explode(',', $allowedMimeTypesString))
+            ->map(function ($s) { return strtolower(trim($s)); })
+            ->filter(function ($s) { return !!$s; });
+
+        if (!$allowedMimeTypes->contains($mimeType)) {
+            return redirect('/')->with('error', 'This file type is not allowed to upload. Allowed file types: ' . $allowedMimeTypesString);
+        }
+
         $path = $uploadedFile->store('uploads');
 
         $upload = new Upload();
@@ -38,7 +49,7 @@ class Controller extends BaseController {
         $upload->username = $request->input('user_name');
         $upload->save();
 
-        return redirect('/')->with('success', 'File uploaded successfully!');
+        return redirect('/')->with('success', 'File uploaded successfully! MIME type: ' . $mimeType);
     }
 
 
