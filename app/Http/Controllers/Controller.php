@@ -46,14 +46,14 @@ class Controller extends BaseController {
     }
 
     function upload(Request $request) {
-        $requestField = $request->file('fileUpload');
+        $uploadedFile = $request->file('fileUpload');
 
-        $path = $requestField->store('uploads');
+        $path = $uploadedFile->store('uploads');
 
         $upload = new Upload();
         $upload->path = $path;
-        $upload->filename = $requestField->getFilename();
-        $upload->size = $requestField->getSize();
+        $upload->filename = $uploadedFile->getClientOriginalName();
+        $upload->size = $uploadedFile->getSize();
         $upload->username = $request->input('user_name');
         $upload->save();
 
