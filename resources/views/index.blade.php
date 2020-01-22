@@ -31,7 +31,7 @@
             @endif
 
             <div class="title">
-                Upload Files
+                Upload a File
             </div>
 
             <form class="upload-area" method="post" action="/upload" enctype="multipart/form-data">
