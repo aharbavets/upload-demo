@@ -43,4 +43,9 @@ class Upload extends Model {
      */
     public $timestamps = true;
 
+    public $fillable = [
+        'id',
+        'mime_type',
+    ];
+
 }

@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Http\Testing\MimeType;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Upload;
+use App\Utils\UploadUtils;
 
 class Controller extends BaseController {
 
@@ -17,9 +16,9 @@ class Controller extends BaseController {
 
 
     function index() {
-        $uploads = Upload::all();
+        $uploads = Upload::all()->collect();
 
-        $fileTypes = self::groupUploadsByTypes($uploads);
+        $fileTypes = UploadUtils::groupUploadsByTypes($uploads);
 
         return view('index', compact('fileTypes'));
     }
@@ -50,32 +49,5 @@ class Controller extends BaseController {
 
         return redirect('/')->with('success', 'File uploaded successfully!');
     }
-
-    private static function groupUploadsByTypes(Collection $uploads) {
-        $typeMap = collect();
-
-        foreach ($uploads as $upload) {
-            $mimeType = $upload->mime_type;
-            if ($typeMap->has($mimeType)) {
-                $array = $typeMap[$mimeType];
-                $array[] = $upload; // add to existing array
-                $typeMap[$mimeType] = $array;
-            } else {
-                $typeMap[$mimeType] = [$upload]; // init with array
-            }
-        }
-
-
-        $result = [];
-        foreach ($typeMap as $type => $uploads) {
-            $result[] = [
-                'title' => $type,
-                'files' => $uploads,
-            ];
-        }
-
-        return $result;
-    }
-
 
 }
