@@ -39,7 +39,7 @@ class Controller extends BaseController {
         $upload->username = $request->input('user_name');
         $upload->save();
 
-        return redirect('/');
+        return redirect('/')->with('success', 'File uploaded successfully!');
     }
 
 
