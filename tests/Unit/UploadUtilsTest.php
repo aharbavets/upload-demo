@@ -58,13 +58,20 @@ class UploadUtilsTest extends TestCase {
     }
 
     /**
-     * This test should fail as it is described in the test task
+     * Test grouping when mime type is empty
      * @return void
      */
-    public function testGroupingTestWhichFails() {
-        $groups = UploadUtils::groupUploadsByTypes($this->uploads);
+    public function testGroupingTestWithEmptyMimeType() {
+        $uploads = collect([
+            new Upload([
+                'id' => 1,
+                'mime_type' => '',
+            ])
+        ]);
 
-        $this->assertEquals(3, count($groups));
+        $groups = UploadUtils::groupUploadsByTypes($uploads);
+
+        $this->assertEquals(0, count($groups));
     }
 
 }

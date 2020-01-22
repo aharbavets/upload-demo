@@ -12,6 +12,11 @@ class UploadUtils {
 
         foreach ($uploads as $upload) {
             $mimeType = $upload->mime_type;
+
+            if (!$mimeType) {
+                continue;
+            }
+
             if ($typeMap->has($mimeType)) {
                 $array = $typeMap[$mimeType];
                 $array[] = $upload; // add to existing array
