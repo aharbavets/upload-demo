@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use App\Models\Upload;
 
 class Controller extends BaseController {
 
@@ -43,8 +45,19 @@ class Controller extends BaseController {
         return view('index', compact('fileTypes'));
     }
 
-    function upload() {
+    function upload(Request $request) {
+        $requestField = $request->file('fileUpload');
 
+        $path = $requestField->store('uploads');
+
+        $upload = new Upload();
+        $upload->path = $path;
+        $upload->filename = $requestField->getFilename();
+        $upload->size = $requestField->getSize();
+        $upload->username = $request->input('user_name');
+        $upload->save();
+
+        return redirect('/');
     }
 
 

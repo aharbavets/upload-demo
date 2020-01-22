@@ -19,17 +19,17 @@
                 Upload Files
             </div>
 
-            <form class="upload-area" method="post" action="/upload">
+            <form class="upload-area" method="post" action="/upload" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group">
                     <label class="control-label" for="user-name">File</label>
-                    <input class="form-control" type="file" required/>
+                    <input class="form-control" type="file" name="fileUpload" required/>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label" for="user-name">User Name</label>
-                    <input id="user-name" class="form-control" type="text" required>
+                    <input id="user-name" name="user_name" class="form-control" type="text" required>
                 </div>
 
                 <div class="form-group">
