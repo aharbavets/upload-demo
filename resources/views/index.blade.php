@@ -86,7 +86,7 @@
                         <tbody>
                             @foreach ($fileType['files'] as $file)
                                 <tr>
-                                    <td>{{$file['name']}}</td>
+                                    <td>{{$file['name'] ?? ''}}</td>
                                     <td>{{$file['size'] ?? ''}}</td>
                                     <td>{{$file['upload_date'] ?? ''}}</td>
                                     <td>{{$file['user_name'] ?? ''}}</td>
