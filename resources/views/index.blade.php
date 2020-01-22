@@ -8,60 +8,10 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            h1 {
-                margin-top: 30px;
-            }
-
-            .content {
-                margin: 0 auto 100px;
-                max-width: 800px;
-            }
-
-            .title {
-                font-size: 84px;
-                text-align: center;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .center {
-                text-align: center;
-            }
-
-            .table-bordered {
-                border-collapse: collapse;
-            }
-
-            .table-bordered th, .table-bordered td {
-                padding: 5px 10px;
-                border: 1px solid gray;
-            }
-
-            .table-full-width {
-                width: 100%;
-            }
-        </style>
     </head>
     <body>
         <div class="content">
@@ -69,15 +19,16 @@
                 Upload Files
             </div>
 
-            <form class="upload-area center" method="post" action="/upload">
+            <form class="upload-area" method="post" action="/upload">
                 @csrf
 
                 <div class="form-group">
+                    <label class="control-label" for="user-name">File</label>
                     <input class="form-control" type="file" required/>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="user-name"> User Name</label>
+                    <label class="control-label" for="user-name">User Name</label>
                     <input id="user-name" class="form-control" type="text" required>
                 </div>
 

@@ -8553,21 +8553,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added storage/.gitkeep" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2" timestamp="1579697578308">
+    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2" timestamp="1579704536153">
       <screen x="0" y="0" width="1918" height="1028" />
     </state>
-    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2/0.0.1918.1028@0.0.1918.1028" timestamp="1579697578308" />
+    <state x="357" y="105" width="1194" height="814" key="CommitChangelistDialog2/0.0.1918.1028@0.0.1918.1028" timestamp="1579704536153" />
     <state x="448" y="148" key="SettingsEditor" timestamp="1579700133828">
       <screen x="0" y="0" width="1918" height="1028" />
     </state>
     <state x="448" y="148" key="SettingsEditor/0.0.1918.1028@0.0.1918.1028" timestamp="1579700133828" />
-    <state x="798" y="429" width="301" height="164" key="VCS.ChangelistChooser" timestamp="1579697556820">
+    <state x="798" y="429" width="301" height="164" key="VCS.ChangelistChooser" timestamp="1579704519446">
       <screen x="0" y="0" width="1918" height="1028" />
     </state>
-    <state x="798" y="429" width="301" height="164" key="VCS.ChangelistChooser/0.0.1918.1028@0.0.1918.1028" timestamp="1579697556820" />
+    <state x="798" y="429" width="301" height="164" key="VCS.ChangelistChooser/0.0.1918.1028@0.0.1918.1028" timestamp="1579704519446" />
     <state x="617" y="230" width="684" height="566" key="find.popup" timestamp="1579697671131">
       <screen x="0" y="0" width="1918" height="1028" />
     </state>
     <state x="617" y="230" width="684" height="566" key="find.popup/0.0.1918.1028@0.0.1918.1028" timestamp="1579697671131" />
+    <state x="623" y="160" width="670" height="676" key="search.everywhere.popup" timestamp="1579704640820">
+      <screen x="0" y="0" width="1918" height="1028" />
+    </state>
+    <state x="623" y="160" width="670" height="676" key="search.everywhere.popup/0.0.1918.1028@0.0.1918.1028" timestamp="1579704640820" />
   </component>
 </project>
