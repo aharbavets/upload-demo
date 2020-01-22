@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $filename
  * @property int $size
  * @property string $username
+ * @property string $mime_type
  * @property string $created_at
  */
 class Upload extends Model {

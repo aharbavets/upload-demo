@@ -18,6 +18,7 @@ class CreateUploadsTable extends Migration {
             $table->bigInteger('size');
             $table->string('username');
             $table->string('path');
+            $table->string('mime_type');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

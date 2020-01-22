@@ -73,10 +73,10 @@
                         <tbody>
                             @foreach ($fileType['files'] as $file)
                                 <tr>
-                                    <td>{{$file['filename'] ?? ''}}</td>
-                                    <td>{{$file['size'] ?? ''}}</td>
-                                    <td>{{$file['created_at'] ?? ''}}</td>
-                                    <td>{{$file['username'] ?? ''}}</td>
+                                    <td>{{$file->filename}}</td>
+                                    <td>{{$file->size}}</td>
+                                    <td>{{$file->created_at}}</td>
+                                    <td>{{$file->username}}</td>
                                 </tr>
                             @endforeach
                         </tbody>
