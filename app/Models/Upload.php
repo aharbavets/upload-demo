@@ -48,4 +48,14 @@ class Upload extends Model {
         'mime_type',
     ];
 
+    function getCreatedDate() {
+        if (!$this->created_at) {
+            return '';
+        }
+
+        $array = explode(' ', $this->created_at);
+
+        return count($array) > 0 ? $array[0] : '';
+    }
+
 }

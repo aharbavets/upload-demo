@@ -75,7 +75,7 @@
                                 <tr>
                                     <td>{{$file->filename}}</td>
                                     <td>{{$file->size}}</td>
-                                    <td>{{$file->created_at}}</td>
+                                    <td>{{$file->getCreatedDate()}}</td>
                                     <td>{{$file->username}}</td>
                                 </tr>
                             @endforeach
