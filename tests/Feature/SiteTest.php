@@ -15,7 +15,6 @@ class SiteTest extends TestCase {
 
     public function testBasicTest() {
         $response = $this->get('/');
-
         $response->assertStatus(200);
         $response->assertSee('Upload a File');
     }
@@ -35,6 +34,9 @@ class SiteTest extends TestCase {
         ]);
         $response->assertStatus(302);
 
+        $response = $this->get('/');
+        $response->assertStatus(200);
+        $response->assertSee('File uploaded successfully!');
     }
 
     public function testUploadUnsupportedFileType() {
@@ -52,6 +54,9 @@ class SiteTest extends TestCase {
         ]);
         $response->assertStatus(302);
 
+        $response = $this->get('/');
+        $response->assertStatus(200);
+        $response->assertSee('This file type is not allowed to upload.');
     }
 
 }
