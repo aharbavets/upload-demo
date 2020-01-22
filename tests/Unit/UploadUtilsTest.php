@@ -4,12 +4,13 @@ namespace Tests\Unit;
 
 use App\Models\Upload;
 use App\Utils\UploadUtils;
+use Illuminate\Support\Collection;
 use PHPUnit\Framework\TestCase;
 
 class UploadUtilsTest extends TestCase {
 
     /**
-     * @var \Illuminate\Support\Collection
+     * @var Collection
      */
     protected $uploads;
 
