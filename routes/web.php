@@ -14,4 +14,4 @@
 Route::get('/', 'Controller@index');
 
 
-Route::get('/upload', 'Controller@upload');
+Route::post('/upload', 'Controller@upload');

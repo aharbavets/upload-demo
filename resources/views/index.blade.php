@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Upload Files Demo</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -20,9 +21,13 @@
                 margin: 0;
             }
 
+            h1 {
+                margin-top: 30px;
+            }
+
             .content {
-                margin: auto;
-                max-width: 600px;
+                margin: 0 auto 100px;
+                max-width: 800px;
             }
 
             .title {
@@ -64,15 +69,31 @@
                 Upload Files
             </div>
 
-            <div class="upload-area center">
-                <input type="file"/>
-            </div>
+            <form class="upload-area center" method="post" action="/upload">
+                @csrf
+
+                <div class="form-group">
+                    <input class="form-control" type="file" required/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="user-name"> User Name</label>
+                    <input id="user-name" class="form-control" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary">Upload</button>
+                </div>
+            </form>
 
             <div class="file-list-area">
+                <div class="title">
+                    Uploaded Files
+                </div>
 
                 @foreach ($fileTypes as $fileType)
 
-                    <h2>{{$fileType['title']}}</h2>
+                    <h1>{{$fileType['title']}}</h1>
 
                     <table class="table-bordered table-full-width">
                         <thead>

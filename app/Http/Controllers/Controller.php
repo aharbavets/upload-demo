@@ -21,7 +21,7 @@ class Controller extends BaseController {
                         'name' => 'File1.jpg',
                         'size' => '5MB',
                         'upload_date' => '2020-01-20',
-                        'user_name' => 'File1.jpg',
+                        'user_name' => 'Alexander',
                     ],
                     ['name' => 'File2.jpeg'],
                     ['name' => 'File3.jpg'],
